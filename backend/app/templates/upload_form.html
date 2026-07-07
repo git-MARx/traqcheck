@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+  <title>Submit Your Documents</title>
+</head>
+<body style="font-family: sans-serif; max-width: 480px; margin: 40px auto;">
+  <h2>Hi {{ candidate.name or "there" }},</h2>
+  <p>
+    As part of your background verification for {{ candidate.company or "us" }},
+    we need copies of your PAN and Aadhaar cards.
+  </p>
+
+  <form method="POST" enctype="multipart/form-data">
+    <p>
+      <label>PAN card<br>
+        <input type="file" name="pan" accept="image/*,.pdf">
+      </label>
+    </p>
+    <p>
+      <label>Aadhaar card<br>
+        <input type="file" name="aadhaar" accept="image/*,.pdf">
+      </label>
+    </p>
+    <button type="submit">Submit Documents</button>
+  </form>
+</body>
+</html>
