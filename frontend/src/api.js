@@ -1,4 +1,6 @@
-const BASE = '/api'
+// In dev, Vite's proxy forwards /api/* to the local backend (see vite.config.js).
+// In production there's no proxy, so this points straight at the deployed backend.
+const BASE = import.meta.env.VITE_API_BASE_URL || '/api'
 
 async function request(path, options = {}) {
   const res = await fetch(`${BASE}${path}`, options)

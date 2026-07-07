@@ -1,6 +1,7 @@
 import os
 
 from flask import Flask
+from flask_cors import CORS
 
 from config import Config
 from app.extensions import db
@@ -12,6 +13,7 @@ def create_app():
 
     os.makedirs(app.config["UPLOAD_FOLDER"], exist_ok=True)
 
+    CORS(app, origins=app.config["FRONTEND_ORIGINS"])
     db.init_app(app)
 
     from app import models  # noqa: F401

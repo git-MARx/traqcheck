@@ -20,3 +20,6 @@ class Config:
 
     BASE_URL = os.environ.get("BASE_URL", "http://localhost:5001")
     REQUEST_TTL_DAYS = 3
+
+    # comma-separated list of origins allowed to call this API cross-origin
+    FRONTEND_ORIGINS = os.environ.get("FRONTEND_ORIGINS", "http://localhost:5173").split(",")
