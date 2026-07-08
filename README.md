@@ -3,7 +3,7 @@
 Full-stack system that parses candidate resumes, extracts structured profile data, and uses an AI agent to autonomously request PAN/Aadhaar identity documents.
 
 **Live demo**: [traqcheck-frontend.onrender.com](https://traqcheck-frontend.onrender.com) *(free-tier backend — first request after inactivity may take ~50s to wake up)*
-**Loom walkthrough**: _add link here_
+
 
 ## What's built
 
